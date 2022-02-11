@@ -45,13 +45,6 @@ $(function(){
     }
   }
 
-  function logOut() {
-    liff.logout()
-    window.location.reload()
-  }
-  function logIn() {
-    liff.login({ redirectUri: window.location.href })
-  }
   function runApp() {
      liff.getProfile().then(profile => {
        document.getElementById("pictureUrl").src = profile.pictureUrl;
@@ -68,10 +61,6 @@ $(function(){
        liff.login();
      }
    }, err => console.error(err.code, error.message));
-
-  $('#btnLogIn').on('click' , function(evt){
-    logIn();
-  });
 
 });
 </script>
