@@ -61,7 +61,13 @@ $(function(){
        liff.login();
      }
    }, err => console.error(err.code, error.message));
-
+  $('#btn_logout').on('click',function(){
+    liff.init({ liffId: liffid }, () => {
+     
+       liff.logout();
+     
+   }, err => console.error(err.code, error.message));
+  });
 });
 </script>
 <body>
@@ -70,5 +76,6 @@ $(function(){
   <p id="displayName"></p>
   <p id="statusMessage"></p>
   <p id="getDecodedIDToken"></p>
+  <button id="btn_logout">Logout</button>
 </body>
 </html>
