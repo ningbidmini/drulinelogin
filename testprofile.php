@@ -56,7 +56,7 @@ $(function(){
        document.getElementById("txt_userid").value=profile.userId;
        document.getElementById("txt_displayname").value=profile.displayName;
        document.getElementById("txt_statusmessage").value=profile.statusMessage;
-       document.getElementById("txt_lineemail").value=liff.getDecodedIDToken().email;
+       
      }).catch(err => console.error(err));
    }
    liff.init({ liffId: liffid }, () => {
@@ -78,11 +78,17 @@ $(function(){
     var myformdata = {
      'data_userid':$('#myform_registers #txt_userid').val(), 
      'data_displayname':$('#myform_registers #txt_displayname').val(), 
-     'data_statusmessage':$('#myform_registers #txt_statusmessage').val(), 
-     'data_lineemail':$('#myform_registers #txt_lineemail').val(), 
+     'data_statusmessage':$('#myform_registers #txt_statusmessage').val(),      
      'data_drumail':$('#myform_registers #txt_drumail').val(), 
     }
     console.log(myformdata);
+    var setdata = new FormData();
+    setdata.append('query_category','users_line_registers');
+    setdata.append('query_keydata',JSON.stringify(myformdata));
+    const querystatus = querydata(url_default,setdata);
+    querystatus.then((result)=>{
+      console.log(result);
+    });
   });
   
 });
@@ -96,8 +102,7 @@ $(function(){
   <form id="myform_registers">
     <input type="hidden" id="txt_userid" >
     <input type="hidden" id="txt_displayname" >
-    <input type="hidden" id="txt_statusmessage" >
-    <input type="hidden" id="txt_lineemail" >
+    <input type="hidden" id="txt_statusmessage" >    
     <input type="text" id="txt_drumail" >
   </form>
   <button id="btn_registers">Registers</button>
