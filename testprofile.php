@@ -52,6 +52,8 @@ $(function(){
        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+       
+       document.getElementById("txt_userid").value=profile.userId;
      }).catch(err => console.error(err));
    }
    liff.init({ liffId: liffid }, () => {
@@ -68,6 +70,14 @@ $(function(){
        location='./testprofile.php';
    }, err => console.error(err.code, error.message));
   });
+  
+  $('#btn_registers').on('click',function(){
+    var myformdata = {
+     'data_userid':$('#myform_registers #txt_userid').val(), 
+    }
+    console.log(myformdata);
+  });
+  
 });
 </script>
 <body>
@@ -76,6 +86,14 @@ $(function(){
   <p id="displayName"></p>
   <p id="statusMessage"></p>
   <p id="getDecodedIDToken"></p>
+  <form id="myform_registers">
+    <input type="hidden" id="txt_userid" >
+    <input type="hidden" id="txt_displayname" >
+    <input type="hidden" id="txt_statusmessage" >
+    <input type="hidden" id="txt_getdecode" >
+    <input type="hidden" id="txt_userid" >
+  </form>
+  <button id="btn_registers">Registers</button>
   <button id="btn_logout">Logout</button>
 </body>
 </html>
