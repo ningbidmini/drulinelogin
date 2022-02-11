@@ -54,6 +54,9 @@ $(function(){
        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
        
        document.getElementById("txt_userid").value=profile.userId;
+       document.getElementById("txt_displayname").value=profile.displayName;
+       document.getElementById("txt_statusmessage").value=profile.statusMessage;
+       document.getElementById("txt_lineemail").value=liff.getDecodedIDToken().email;
      }).catch(err => console.error(err));
    }
    liff.init({ liffId: liffid }, () => {
@@ -74,6 +77,10 @@ $(function(){
   $('#btn_registers').on('click',function(){
     var myformdata = {
      'data_userid':$('#myform_registers #txt_userid').val(), 
+     'data_displayname':$('#myform_registers #txt_displayname').val(), 
+     'data_statusmessage':$('#myform_registers #txt_statusmessage').val(), 
+     'data_lineemail':$('#myform_registers #txt_lineemail').val(), 
+     'data_drumail':$('#myform_registers #txt_drumail').val(), 
     }
     console.log(myformdata);
   });
@@ -90,8 +97,8 @@ $(function(){
     <input type="hidden" id="txt_userid" >
     <input type="hidden" id="txt_displayname" >
     <input type="hidden" id="txt_statusmessage" >
-    <input type="hidden" id="txt_getdecode" >
-    <input type="hidden" id="txt_userid" >
+    <input type="hidden" id="txt_lineemail" >
+    <input type="text" id="txt_drumail" >
   </form>
   <button id="btn_registers">Registers</button>
   <button id="btn_logout">Logout</button>
