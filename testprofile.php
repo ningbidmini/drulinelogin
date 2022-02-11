@@ -65,7 +65,7 @@ $(function(){
     liff.init({ liffId: liffid }, () => {
      
        liff.logout();
-     
+       location='./testprofile.php';
    }, err => console.error(err.code, error.message));
   });
 });
