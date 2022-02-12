@@ -61,12 +61,12 @@ $(function(){
        var set_email = liff.getDecodedIDToken().email;
        var set_os = liff.getOS();
        
-       $('#myform_registers #txt_userid').val(set_userid);
-       $('#myform_registers #txt_displayname').val(set_displayname);
-       $('#myform_registers #txt_viewdisplayname').val(set_displayname);
-       $('#myform_registers #txt_statusmessage').val(set_statusmessage);
-       $('#myform_registers #txt_lineemail').val(set_email);
-       $('#myform_registers #txt_os').val(set_os);
+       $('#txt_userid').val(set_userid);
+       $('#txt_displayname').val(set_displayname);
+       $('#txt_viewdisplayname').val(set_displayname);
+       $('#txt_statusmessage').val(set_statusmessage);
+       $('#txt_lineemail').val(set_email);
+       $('#txt_os').val(set_os);
        
        
         // Try a LIFF function
