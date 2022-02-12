@@ -57,8 +57,17 @@ $(function(){
        document.getElementById("txt_userid").value=profile.userId;
        document.getElementById("txt_displayname").value=profile.displayName;
        document.getElementById("txt_statusmessage").value=profile.statusMessage;
+    
+        // Try a LIFF function
+        switch (liff.getOS()) {
+          case "android": body.style.backgroundColor = "#d1f5d3"; break
+          case "ios": body.style.backgroundColor = "#eeeeee"; break
+          default : body.style.backgroundColor = '#cccccc'; break;
+        }       
        
      }).catch(err => console.error(err));
+    
+    
    }
    liff.init({ liffId: liffid }, () => {
      if (liff.isLoggedIn()) {
