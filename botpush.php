@@ -17,7 +17,7 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world Test Systems Fuck!!!');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
-echo json_encode($response);
+echo json_encode($response->getHTTPStatus());
 // echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
 
