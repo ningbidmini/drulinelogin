@@ -57,14 +57,16 @@ $(function(){
 //        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
        var set_userid = profile.userId;
        var set_displayname = profile.displayName;
-       
+       var set_statusmessage = profile.statusMessage
+       var set_email = liff.getDecodedIDToken().email;
+       var set_os = liff.getOS();
        
        $('#myform_registers #txt_userid').val(set_userid);
-       $('#myform_registers #txt_displayname').val(profile.displayName);
+       $('#myform_registers #txt_displayname').val(set_displayname);
        $('#myform_registers #txt_viewdisplayname').val(set_displayname);
-       $('#myform_registers #txt_statusmessage').val(profile.txt_statusmessage);
-       $('#myform_registers #txt_lineemail').val(liff.getDecodedIDToken().email);
-       $('#myform_registers #txt_os').val(liff.getOS());
+       $('#myform_registers #txt_statusmessage').val(set_statusmessage);
+       $('#myform_registers #txt_lineemail').val(set_email);
+       $('#myform_registers #txt_os').val(set_os);
        
        
         // Try a LIFF function
