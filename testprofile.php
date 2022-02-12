@@ -55,11 +55,13 @@ $(function(){
 //        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
 //        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
 //        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+       var set_userid = profile.userId;
+       var set_displayname = profile.displayName;
        
        
-       $('#myform_registers #txt_userid').val(profile.userId);
+       $('#myform_registers #txt_userid').val(set_userid);
        $('#myoform_registers #txt_displayname').val(profile.displayName);
-       $('#myoform_registers #txt_viewdisplayname').val(profile.displayName);
+       $('#myoform_registers #txt_viewdisplayname').val(set_displayname);
        $('#myoform_registers #txt_statusmessage').val(profile.txt_statusmessage);
        $('#myoform_registers #txt_lineemail').val(liff.getDecodedIDToken().email);
        $('#myoform_registers #txt_os').val(liff.getOS());
