@@ -63,11 +63,11 @@ $(function(){
        document.getElementById("txt_lineemail").value=liff.getDecodedIDToken().email;
        document.getElementById("txt_os").value=liff.getOS();
         // Try a LIFF function
-//         switch (liff.getOS()) {
-//           case "android": body.style.backgroundColor = "#d1f5d3"; break
-//           case "ios": body.style.backgroundColor = "#eeeeee"; break
-//           default : body.style.backgroundColor = '#cccccc'; break;
-//         }       
+        switch (liff.getOS()) {
+          case "android": $('body').css({'background-color' : "#d1f5d3"}); break;
+          case "ios": body.style.backgroundColor = "#eeeeee"; break;
+          default : body.style.backgroundColor = '#cccccc'; break;
+        }       
        
      }).catch(err => console.error(err));
     
