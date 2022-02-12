@@ -198,13 +198,6 @@ $(function(){
       </div>
     </div>
   </div>
-<!--   <img id="pictureUrl" width="25%">
-  <p id="userId"></p>
-  <p id="displayName"></p>
-  <p id="statusMessage"></p>
-  <p id="getDecodedIDToken"></p> -->
-  
-<!--   <button id="btn_registers">Registers</button>
-  <button id="btn_logout">Logout</button> -->
+
 </body>
 </html>
