@@ -139,7 +139,14 @@ $(function(){
 });
 </script>
 <body>
-  
+  <div class="container-fluid" >
+    <div class="row" >
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" >
+        <img src="https://obs.line-scdn.net/0h3fjYUxY4bElXIHvS0qETHgB9ZytkQnJCdRR4LjpfRx44byh8LzhKUDFcVD8mQmAfKxRWTy51R3kxa3R7YzpGSzpzbQogQ3daLDpFci1cQBI7cU1j/f256x256" class="img img-responsive" />
+        
+      </div>
+    </div>
+  </div>
   <img id="pictureUrl" width="25%">
   <p id="userId"></p>
   <p id="displayName"></p>
