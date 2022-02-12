@@ -100,6 +100,9 @@ $(function(){
   alert('Cancelled!')
  }
 }
+  $('form').on('submit',function(){
+    return false;
+  });
   $('#myform_registers #btn_save').on('click',function(){
     var myformdata = {
      'data_userid':$('#myform_registers #txt_userid').val(), 
