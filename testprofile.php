@@ -100,7 +100,7 @@ $(function(){
   alert('Cancelled!')
  }
 }
-  $('#myform_registers #btn_registers').on('click',function(){
+  $('#myform_registers #btn_save').on('click',function(){
     var myformdata = {
      'data_userid':$('#myform_registers #txt_userid').val(), 
      'data_displayname':$('#myform_registers #txt_displayname').val(), 
