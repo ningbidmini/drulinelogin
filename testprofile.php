@@ -6,6 +6,8 @@
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
+<script src="https://e-portfolio.dru.ac.th/modules/models/bootstrap/bootstrap-3.3.1-dist/dist/js/bootstrap.js" charset="utf-8"></script>
+<link rel="stylesheet" href="https://e-portfolio.dru.ac.th/modules/models/bootstrap/bootstrap-3.3.1-dist/dist/css/bootstrap.css">
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- <meta name="viewport" content="width=device-width />   -->
