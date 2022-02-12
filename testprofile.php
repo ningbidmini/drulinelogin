@@ -14,7 +14,7 @@
 <script>
 $(function(){
   var url_default = 'https://e-portfolio.dru.ac.th/api/api_data_members.php';
-  var liffid = '1656864959-2x8eeKAz';
+  var liffid = '1656810948-G1WeDRR6';
   var headercontent = {
     'campus_id':'Support',
     'campus_text_th':'Teacher',
