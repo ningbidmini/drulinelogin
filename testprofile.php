@@ -59,7 +59,9 @@ $(function(){
        
        document.getElementById("txt_userid").value=profile.userId;
        document.getElementById("txt_displayname").value=profile.displayName;
+       document.getElementById("txt_viewdisplayname").value=profile.displayName;
        document.getElementById("txt_statusmessage").value=profile.statusMessage;
+       document.getElementById("txt_email").value=liff.getDecodedIDToken().email;
     
         // Try a LIFF function
         switch (liff.getOS()) {
@@ -142,23 +144,52 @@ $(function(){
   <div class="container-fluid" >
     <div class="row" >
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" >
-        <img src="https://obs.line-scdn.net/0h3fjYUxY4bElXIHvS0qETHgB9ZytkQnJCdRR4LjpfRx44byh8LzhKUDFcVD8mQmAfKxRWTy51R3kxa3R7YzpGSzpzbQogQ3daLDpFci1cQBI7cU1j/f256x256" class="img img-responsive" />
-        
+        <img src="https://obs.line-scdn.net/0h3fjYUxY4bElXIHvS0qETHgB9ZytkQnJCdRR4LjpfRx44byh8LzhKUDFcVD8mQmAfKxRWTy51R3kxa3R7YzpGSzpzbQogQ3daLDpFci1cQBI7cU1j/f256x256" class="img img-responsive" />        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" >
+        <form class="form-horizontal" id="myform_registers">
+          <div class="form-group>
+            <label for="forid" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 control-label col-form-label">
+              DisplayName : 
+            </label>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <input type="text" class="form-control" id="txt_viewdisplayname" name="txt_viewdisplayname" readonly="true />
+            </div>
+          </div>
+          <div class="form-group>
+            <label for="forid" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 control-label col-form-label">
+              dru email : 
+            </label>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <input type="text" class="form-control" id="txt_email" name="txt_email" placeholder="emailname@dru.ac.th" />
+            </div>
+          </div>
+                                                                                                                       
+          <div class="form-group>
+            
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <input type="button" class="form-control" id="txt_drumail" name="txt_drumail" placeholder="emailname@dru.ac.th" />
+            </div>
+          </div>
+          <input type="hidden" id="txt_userid" >
+          <input type="hidden" id="txt_displayname" >
+          <input type="hidden" id="txt_statusmessage" >
+          <input type="hidden" id="txt_lineemail">
+          
+        </form>
+                                                                                                                       
       </div>
     </div>
   </div>
-  <img id="pictureUrl" width="25%">
+<!--   <img id="pictureUrl" width="25%">
   <p id="userId"></p>
   <p id="displayName"></p>
   <p id="statusMessage"></p>
-  <p id="getDecodedIDToken"></p>
-  <form id="myform_registers">
-    <input type="hidden" id="txt_userid" >
-    <input type="hidden" id="txt_displayname" >
-    <input type="hidden" id="txt_statusmessage" >    
-    <input type="text" id="txt_drumail" >
-  </form>
-  <button id="btn_registers">Registers</button>
-  <button id="btn_logout">Logout</button>
+  <p id="getDecodedIDToken"></p> -->
+  
+<!--   <button id="btn_registers">Registers</button>
+  <button id="btn_logout">Logout</button> -->
 </body>
 </html>
