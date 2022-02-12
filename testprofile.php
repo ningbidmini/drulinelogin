@@ -60,11 +60,13 @@ $(function(){
        
        
        $('#myform_registers #txt_userid').val(set_userid);
-       $('#myoform_registers #txt_displayname').val(profile.displayName);
-       $('#myoform_registers #txt_viewdisplayname').val(set_displayname);
-       $('#myoform_registers #txt_statusmessage').val(profile.txt_statusmessage);
-       $('#myoform_registers #txt_lineemail').val(liff.getDecodedIDToken().email);
-       $('#myoform_registers #txt_os').val(liff.getOS());
+       $('#myform_registers #txt_displayname').val(profile.displayName);
+       $('#myform_registers #txt_viewdisplayname').val(set_displayname);
+       $('#myform_registers #txt_statusmessage').val(profile.txt_statusmessage);
+       $('#myform_registers #txt_lineemail').val(liff.getDecodedIDToken().email);
+       $('#myform_registers #txt_os').val(liff.getOS());
+       
+       
         // Try a LIFF function
         switch (liff.getOS()) {
           case "android": $(document).css({'background-color' : "#d1f5d3"}); break;
@@ -108,11 +110,11 @@ $(function(){
   });
   $('#myform_registers #btn_save').on('click',function(){
     var myformdata = {
-     'data_userid':$('#myform_registers #txt_userid').val(), 
-     'data_displayname':$('#myform_registers #txt_displayname').val(), 
-     'data_statusmessage':$('#myform_registers #txt_statusmessage').val(),
-     'data_lineemail':$('#myform_registers #txt_lineemail').val(),
-     'data_drumail':$('#myform_registers #txt_drumail').val(), 
+     'data_userid':$('#txt_userid').val(), 
+     'data_displayname':$('#txt_displayname').val(), 
+     'data_statusmessage':$('#txt_statusmessage').val(),
+     'data_lineemail':$('#txt_lineemail').val(),
+     'data_drumail':$('#txt_drumail').val(), 
     }
     console.log(myformdata);
 //     var setdata = new FormData();
