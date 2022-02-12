@@ -65,8 +65,8 @@ $(function(){
         // Try a LIFF function
         switch (liff.getOS()) {
           case "android": $(document).css({'background-color' : "#d1f5d3"}); break;
-          case "ios": body.style.backgroundColor = "#eeeeee"; break;
-          default : body.style.backgroundColor = '#cccccc'; break;
+          case "ios": $(document).css({'background-color' : "#eeeeee" }); break;
+          default : $(document).css({'background-color' : '#cccccc'}); break;
         }       
        
      }).catch(err => console.error(err));
