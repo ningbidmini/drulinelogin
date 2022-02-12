@@ -62,13 +62,13 @@ $(function(){
        document.getElementById("txt_viewdisplayname").value=profile.displayName;
        document.getElementById("txt_statusmessage").value=profile.statusMessage;
        document.getElementById("txt_lineemail").value=liff.getDecodedIDToken().email;
-    
+       document.getElementById("txt_os").value=liff.getOS();
         // Try a LIFF function
-        switch (liff.getOS()) {
-          case "android": body.style.backgroundColor = "#d1f5d3"; break
-          case "ios": body.style.backgroundColor = "#eeeeee"; break
-          default : body.style.backgroundColor = '#cccccc'; break;
-        }       
+//         switch (liff.getOS()) {
+//           case "android": body.style.backgroundColor = "#d1f5d3"; break
+//           case "ios": body.style.backgroundColor = "#eeeeee"; break
+//           default : body.style.backgroundColor = '#cccccc'; break;
+//         }       
        
      }).catch(err => console.error(err));
     
@@ -185,6 +185,7 @@ $(function(){
               <button class="btn btn-primary btn-sm btn_save" id="btn_save" >Registers</button>
             </div>
           </div>
+          <input type="text" id="txt_os" />                                                                           
           <input type="hidden" id="txt_userid" >
           <input type="hidden" id="txt_displayname" >
           <input type="hidden" id="txt_statusmessage" >
