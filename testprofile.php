@@ -160,19 +160,24 @@ $(function(){
             <label for="forid" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label col-form-label">
               DisplayName : 
             </label>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
               <input type="text" class="form-control" id="txt_viewdisplayname" name="txt_viewdisplayname" readonly="true />
             </div>
           </div>
           <div class="form-group>
-            <label for="forid" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 control-label col-form-label">
+            <label for="forid" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label col-form-label">
               dru email : 
             </label>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" align="center">
               <input type="text" class="form-control" id="txt_email" name="txt_email" placeholder="emailname@dru.ac.th" />
             </div>
           </div>
-                                                                                                                       
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              </div>
+            </div>
+          </div>                                                                                                            
           <div class="form-group>
             
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
