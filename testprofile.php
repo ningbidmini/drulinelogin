@@ -112,33 +112,33 @@ $(function(){
      'data_drumail':$('#myform_registers #txt_drumail').val(), 
     }
     console.log(myformdata);
-    var setdata = new FormData();
-    setdata.append('query_category','users_line_registers');
-    setdata.append('query_keydata',JSON.stringify(myformdata));
-    const querystatus = querydata(url_default,setdata);
-    querystatus.then((result)=>{
-      console.log(result);
-      if(result.status==true){
-        // closeWindow call
-        if (!liff.isInClient()) {
-            // window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
-            if(result.method=='update'){
-              window.alert('Members Lastupdate');  
-            }else{
-              window.alert('Members Registers Success');
-            }
-            // location='./testprofile.php';
-          closeWindow();
-            //close();
-            //closeWindows();
-            // window.close();
-            // liff.closeWindow();
-        } else {
-            window.alert('Registers Success!!');
-            liff.closeWindow();
-        }
-      }
-    });
+//     var setdata = new FormData();
+//     setdata.append('query_category','users_line_registers');
+//     setdata.append('query_keydata',JSON.stringify(myformdata));
+//     const querystatus = querydata(url_default,setdata);
+//     querystatus.then((result)=>{
+//       console.log(result);
+//       if(result.status==true){
+//         // closeWindow call
+//         if (!liff.isInClient()) {
+//             // window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+//             if(result.method=='update'){
+//               window.alert('Members Lastupdate');  
+//             }else{
+//               window.alert('Members Registers Success');
+//             }
+//             // location='./testprofile.php';
+//           closeWindow();
+//             //close();
+//             //closeWindows();
+//             // window.close();
+//             // liff.closeWindow();
+//         } else {
+//             window.alert('Registers Success!!');
+//             liff.closeWindow();
+//         }
+//       }
+//     });
   });
   
 });
