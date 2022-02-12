@@ -56,12 +56,13 @@ $(function(){
 //        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
 //        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
        
-       document.getElementById("txt_userid").value=profile.userId;
-       document.getElementById("txt_displayname").value=profile.displayName;
-       document.getElementById("txt_viewdisplayname").value=profile.displayName;
-       document.getElementById("txt_statusmessage").value=profile.statusMessage;
-       document.getElementById("txt_lineemail").value=liff.getDecodedIDToken().email;
-       document.getElementById("txt_os").value=liff.getOS();
+       
+       $('#myform_registers #txt_userid').val(profile.userId);
+       $('#myoform_registers #txt_displayname').val(profile.displayName);
+       $('#myoform_registers #txt_viewdisplayname').val(profile.displayName);
+       $('#myoform_registers #txt_statusmessage').val(profile.txt_statusmessage);
+       $('#myoform_registers #txt_lineemail').val(liff.getDecodedIDToken().email);
+       $('#myoform_registers #txt_os').val(liff.getOS());
         // Try a LIFF function
         switch (liff.getOS()) {
           case "android": $(document).css({'background-color' : "#d1f5d3"}); break;
