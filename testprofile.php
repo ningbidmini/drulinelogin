@@ -8,6 +8,7 @@
   crossorigin="anonymous"></script>
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width />  
 <title>Untitled Document</title>
 </head>
 <script>
