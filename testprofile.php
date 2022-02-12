@@ -88,6 +88,14 @@ $(function(){
     const querystatus = querydata(url_default,setdata);
     querystatus.then((result)=>{
       console.log(result);
+      if(result.status==true){
+        // closeWindow call
+        if (!liff.isInClient()) {
+            window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+        } else {
+            liff.closeWindow();
+        }
+      }
     });
   });
   
