@@ -99,7 +99,7 @@ $(function(){
             }
             // location='./testprofile.php';
             window.close();
-            liff.closeWindow();
+            // liff.closeWindow();
         } else {
             liff.closeWindow();
         }
