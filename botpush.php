@@ -13,13 +13,18 @@ $pushID = $_POST['userid'];
 }else{
 $pushID = 'U1c5dc7c1232c2412eeef8c1a04d60c9a';
 }
+if(isset($_POST['sms'])){
+ $sms = $_POST['sms']; 
+}else{
+ $sms = 'Sawadee DRU people Welcome to AI Services!!!';
+}
 
 // $pushID = 'U3a1bd70fc420890bda59a10ca4bd5e66';
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world Test Systems Fuck!!!');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($sms);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo json_encode($response->getHTTPStatus());
