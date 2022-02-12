@@ -61,7 +61,7 @@ $(function(){
        document.getElementById("txt_displayname").value=profile.displayName;
        document.getElementById("txt_viewdisplayname").value=profile.displayName;
        document.getElementById("txt_statusmessage").value=profile.statusMessage;
-       document.getElementById("txt_email").value=liff.getDecodedIDToken().email;
+       document.getElementById("txt_lineemail").value=liff.getDecodedIDToken().email;
     
         // Try a LIFF function
         switch (liff.getOS()) {
@@ -101,11 +101,12 @@ $(function(){
   alert('Cancelled!')
  }
 }
-  $('#btn_registers').on('click',function(){
+  $('#myform_registers #btn_registers').on('click',function(){
     var myformdata = {
      'data_userid':$('#myform_registers #txt_userid').val(), 
      'data_displayname':$('#myform_registers #txt_displayname').val(), 
-     'data_statusmessage':$('#myform_registers #txt_statusmessage').val(),      
+     'data_statusmessage':$('#myform_registers #txt_statusmessage').val(),
+     'data_lineemail':$('#myform_registers #txt_lineemail').val(),
      'data_drumail':$('#myform_registers #txt_drumail').val(), 
     }
     console.log(myformdata);
@@ -161,7 +162,7 @@ $(function(){
               DisplayName : 
             </label>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-              <input type="text" class="form-control" id="txt_viewdisplayname" name="txt_viewdisplayname" readonly="true />
+              <input type="text" class="form-control" id="txt_viewdisplayname" name="txt_viewdisplayname" readonly="true" />
             </div>
           </div>
           <div class="form-group>
