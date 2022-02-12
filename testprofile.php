@@ -98,6 +98,7 @@ $(function(){
               window.alert('Members Registers Success');
             }
             // location='./testprofile.php';
+            window.close();
             liff.closeWindow();
         } else {
             liff.closeWindow();
