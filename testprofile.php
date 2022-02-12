@@ -11,7 +11,6 @@
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="viewport" content="width=device-width />   -->
 <title>Computer Center Service Registers</title>
 </head>
 <script>
@@ -185,7 +184,7 @@ $(function(){
               <button class="btn btn-primary btn-sm btn_save" id="btn_save" >Registers</button>
             </div>
           </div>
-          <input type="text" id="txt_os" />                                                                           
+          <input type="hidden" id="txt_os" />                                                                           
           <input type="hidden" id="txt_userid" >
           <input type="hidden" id="txt_displayname" >
           <input type="hidden" id="txt_statusmessage" >
