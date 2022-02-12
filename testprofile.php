@@ -92,10 +92,10 @@ $(function(){
         // closeWindow call
         if (!liff.isInClient()) {
             // window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
-            if(reuslt.method=='update'){
+            if(result.method=='update'){
               window.alert('Members Lastupdate!!');  
             }else{
-              window.alert('Members Registers Success!!');
+              window.alert('Members Registers Success!');
             }
             location='./testprofile.php';
         } else {
