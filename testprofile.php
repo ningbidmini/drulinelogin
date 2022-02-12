@@ -151,10 +151,12 @@ $(function(){
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" >
         <form class="form-horizontal" id="myform_registers">
           <div class="form-group">
-            <hr/>
+            <div class="row">
+              
+            </div>
           </div>
           <div class="form-group>
-            <label for="forid" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 control-label col-form-label">
+            <label for="forid" class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label col-form-label">
               DisplayName : 
             </label>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
