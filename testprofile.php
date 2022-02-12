@@ -51,11 +51,11 @@ $(function(){
 
   function runApp() {
      liff.getProfile().then(profile => {
-       document.getElementById("pictureUrl").src = profile.pictureUrl;
-       document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
-       document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
-       document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
-       document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+//        document.getElementById("pictureUrl").src = profile.pictureUrl;
+//        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+//        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
+//        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
+//        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
        
        document.getElementById("txt_userid").value=profile.userId;
        document.getElementById("txt_displayname").value=profile.displayName;
@@ -64,11 +64,11 @@ $(function(){
        document.getElementById("txt_email").value=liff.getDecodedIDToken().email;
     
         // Try a LIFF function
-//         switch (liff.getOS()) {
-//           case "android": body.style.backgroundColor = "#d1f5d3"; break
-//           case "ios": body.style.backgroundColor = "#eeeeee"; break
-//           default : body.style.backgroundColor = '#cccccc'; break;
-//         }       
+        switch (liff.getOS()) {
+          case "android": body.style.backgroundColor = "#d1f5d3"; break
+          case "ios": body.style.backgroundColor = "#eeeeee"; break
+          default : body.style.backgroundColor = '#cccccc'; break;
+        }       
        
      }).catch(err => console.error(err));
     
