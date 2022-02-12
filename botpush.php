@@ -9,7 +9,7 @@ $access_token = 'OYm/oMDP/y/rwNpxD0LqfbImJ8VzWgjkiO0LgK3bueLCMkCdipHBZxn1XZg9hN6
 $channelSecret = '69666571f9392e51b6a41fd69628d8d0';
 
 if(isset($_POST['userid'])){ 
-$pushID = $_POST['userID];
+$pushID = $_POST['userid'];
 }else{
 $pushID = 'U1c5dc7c1232c2412eeef8c1a04d60c9a';
 }
