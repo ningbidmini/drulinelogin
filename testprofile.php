@@ -126,6 +126,7 @@ $(function(){
             // window.close();
             // liff.closeWindow();
         } else {
+            window.alert('Registers Success!!');
             liff.closeWindow();
         }
       }
