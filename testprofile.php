@@ -117,6 +117,20 @@ $(function(){
             }
         }
     }
+  function closeWindow() {
+  
+            // Open the new window 
+            // with the URL replacing the
+            // current page using the
+            // _self value
+            let new_window =
+                open(location, '_self');
+  
+            // Close this window
+            new_window.close();
+  
+            return false;
+        }
   $('#btn_registers').on('click',function(){
     var myformdata = {
      'data_userid':$('#myform_registers #txt_userid').val(), 
@@ -141,7 +155,8 @@ $(function(){
               window.alert('Members Registers Success');
             }
             // location='./testprofile.php';
-            close();
+          closeWindow();
+            //close();
             //closeWindows();
             // window.close();
             // liff.closeWindow();
