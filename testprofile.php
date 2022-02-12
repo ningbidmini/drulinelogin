@@ -66,7 +66,7 @@ $(function(){
         switch (liff.getOS()) {
           case "android": $(document).css({'background-color' : "#d1f5d3"}); break;
           case "ios": $(document).css({'background-color' : "#eeeeee" }); break;
-          default : $(document).css({'background-color' : '#333333'}); break;
+          case "web" : $(document).css({'background-color' : '#333333'}); break;
         }       
        
      }).catch(err => console.error(err));
