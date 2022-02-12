@@ -9,6 +9,7 @@
 <script src="https://e-portfolio.dru.ac.th/modules/models/bootstrap/bootstrap-3.3.1-dist/dist/js/bootstrap.js" charset="utf-8"></script>
 <link rel="stylesheet" href="https://e-portfolio.dru.ac.th/modules/models/bootstrap/bootstrap-3.3.1-dist/dist/css/bootstrap.css">
 <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- <meta name="viewport" content="width=device-width />   -->
 <title>Untitled Document</title>
@@ -138,6 +139,7 @@ $(function(){
 });
 </script>
 <body>
+  
   <img id="pictureUrl" width="25%">
   <p id="userId"></p>
   <p id="displayName"></p>
